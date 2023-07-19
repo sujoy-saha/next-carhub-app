@@ -9,9 +9,10 @@ import { calculateCarRent, generateCarImageUrl } from "@/utils";
 
 
 interface CarCardProps {
+    key: string;
     car: CarProps;
 }
-const CarCard = ({ car }: CarCardProps) => {
+const CarCard = ({ key, car }: CarCardProps) => {
     const { city_mpg, year, make, model, transmission, drive } = car;
     const carRent = calculateCarRent(city_mpg, year);
     const [isOpen, setIsOpen] = useState(false);

@@ -31,7 +31,6 @@ export async function fetchCars(filters: FilterProps) {
       headers: headers,
     }
   );
-  console.log(`${url}`);
   // Parse the response as JSON
   const result = await response.json();
   return result;
