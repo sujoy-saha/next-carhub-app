@@ -1,18 +1,26 @@
 import Image from 'next/image'
+import { fetchCars } from '@/utils';
 import { fuels, yearsOfProduction } from "@/constants";
 import { Hero, SearchBar, CustomFilter, CarCard } from '@/components'
-import { fetchCars } from '@/utils';
+import { HomeProps } from '@/types';
 
-export default async function Home() {
-  const allCars = await fetchCars();
-  console.log(allCars);
-
+export default async function Home({ searchParams }: HomeProps) {
+  
+  //get the list of cars from RAPID APIs
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || "",
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || "",
+    limit: searchParams.limit || 10,
+    model: searchParams.model || "",
+  });  
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
     <main className="overflow-hidden">
+      {/* Place for Hero */}
       <Hero></Hero>
-
+      {/* Place for Car Catalogue */}
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className='home__text-container'>
           <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
@@ -25,6 +33,7 @@ export default async function Home() {
             <CustomFilter title='year' options={yearsOfProduction} />
           </div>
         </div>
+        {/* Place for Car Cards */}
         {!isDataEmpty ? (
           <section>
             <div className="home__cars-wrapper">

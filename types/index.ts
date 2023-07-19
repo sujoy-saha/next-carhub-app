@@ -1,5 +1,17 @@
 import { MouseEventHandler } from "react";
 
+export interface FilterProps {
+  manufacturer?: string;
+  year?: number;
+  model?: string;
+  limit?: number;
+  fuel?: string;
+}
+
+export interface HomeProps {
+  searchParams: FilterProps;
+}
+
 export interface CustomButtonProps {
   containerStyles?: string;
   title: string;

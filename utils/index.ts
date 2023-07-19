@@ -1,16 +1,29 @@
+import { CarProps, FilterProps } from "@/types";
 
-const RAPID_API_KEY = process.env.RAPID_API_KEY as string;
-const RAPID_API_HOST = process.env.RAPID_API_HOST as string;
-const RAPID_API_URL = process.env.RAPID_API_URL as string;
+const NEXT_RAPID_API_KEY = process.env.NEXT_RAPID_API_KEY as string;
+const NEXT_RAPID_API_HOST = process.env.NEXT_RAPID_API_HOST as string;
+const NEXT_RAPID_API_END_POINT = process.env.NEXT_RAPID_API_END_POINT as string;
 
-export async function fetchCars() {
+const NEXT_PUBLIC_IMAGIN_API_KEY = process.env.NEXT_PUBLIC_IMAGIN_API_KEY as string;
+const NEXT_PUBLIC_IMAGIN_END_POINT = process.env.NEXT_PUBLIC_IMAGIN_END_POINT as string;
+
+export async function fetchCars(filters: FilterProps) {
+  const { manufacturer, year, model, limit, fuel } = filters;
+
   const headers = {
-    'X-RapidAPI-Key': RAPID_API_KEY,
-    'X-RapidAPI-Host': RAPID_API_HOST
+    'X-RapidAPI-Key': NEXT_RAPID_API_KEY,
+    'X-RapidAPI-Host': NEXT_RAPID_API_HOST
   }
+  //Generate URL with the search params  
+  const url = new URL(NEXT_RAPID_API_END_POINT);      
+  url.searchParams.append('make',manufacturer);
+  url.searchParams.append('model',model);
+  url.searchParams.append('limit',limit);
+  url.searchParams.append('fuel',fuel);
+  url.searchParams.append('year',`${year}`);
   // Set the required headers for the API request
   const response = await fetch(
-    RAPID_API_URL,
+    url,
     {
       headers: headers,
     }
@@ -19,26 +32,20 @@ export async function fetchCars() {
   const result = await response.json();
   return result;
 }
-/*
-const axios = require('axios');
-
-const options = {
-  method: 'GET',
-  url: RAPID_API_URL,
-  params: { model: 'corolla' },
-  headers: {
-    'X-RapidAPI-Key': RAPID_API_KEY,
-    'X-RapidAPI-Host': RAPID_API_HOST
-  }
-};
-
-try {
-  const response = await axios.request(options);
-  console.log(response.data);
-} catch (error) {
-  console.error(error);
+export const generateCarImageUrl = (car: CarProps, angle?: string) => {
+  const url = new URL(NEXT_PUBLIC_IMAGIN_END_POINT);
+  const { make, model, year } = car;  
+  url.searchParams.append('customer', NEXT_PUBLIC_IMAGIN_API_KEY || '');
+  url.searchParams.append('make', make);
+  url.searchParams.append('modelFamily', model.split(" ")[0]);
+  url.searchParams.append('zoomType', 'fullscreen');
+  url.searchParams.append('modelYear', `${year}`);
+  // url.searchParams.append('zoomLevel', zoomLevel);
+  url.searchParams.append('angle', `${angle}`);
+  console.log(url);
+  return `${url}`;
+  //return "/hero.png";
 }
-*/
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
   const basePricePerDay = 50; // Base rental price per day in dollars
