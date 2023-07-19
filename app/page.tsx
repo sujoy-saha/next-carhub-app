@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { fetchCars } from '@/utils';
 import { fuels, yearsOfProduction } from "@/constants";
-import { Hero, SearchBar, CustomFilter, CarCard } from '@/components'
+import { Hero, SearchBar, CustomFilter, CarCard, ShowMore } from '@/components'
 import { HomeProps } from '@/types';
 
 export default async function Home({ searchParams }: HomeProps) {
-  
+
   //get the list of cars from RAPID APIs
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
@@ -13,7 +13,7 @@ export default async function Home({ searchParams }: HomeProps) {
     fuel: searchParams.fuel || "",
     limit: searchParams.limit || 10,
     model: searchParams.model || "",
-  });  
+  });
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
@@ -40,7 +40,11 @@ export default async function Home({ searchParams }: HomeProps) {
               {allCars?.map((car) => (
                 <CarCard car={car} />
               ))}
-            </div>            
+            </div>
+            <ShowMore
+              pageNumber={(searchParams.limit || 10) / 10}
+              isNext={(searchParams.limit || 10) > allCars.length}
+            />
           </section>
         ) : (
           <div className="home__error-container">

@@ -10,14 +10,14 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
     const [query, setQuery] = useState("");
     //get the list o manufacturers
     const filteredManufacturers =
-    query === ""
-      ? manufacturers
-      : manufacturers.filter((item) =>
-          item
-            .toLowerCase()
-            .replace(/\s+/g, "")
-            .includes(query.toLowerCase().replace(/\s+/g, ""))
-        );
+        query === ""
+            ? manufacturers
+            : manufacturers.filter((item) =>
+                item
+                    .toLowerCase()
+                    .replace(/\s+/g, "")
+                    .includes(query.toLowerCase().replace(/\s+/g, ""))
+            );
 
     return (
         <div className="search-manufacturer">
