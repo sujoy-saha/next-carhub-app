@@ -15,11 +15,14 @@ export async function fetchCars(filters: FilterProps) {
     'X-RapidAPI-Host': NEXT_RAPID_API_HOST
   }
   //Generate URL with the search params  
-  const url = new URL(NEXT_RAPID_API_END_POINT);      
-  url.searchParams.append('make',manufacturer);
-  url.searchParams.append('model',model);
-  url.searchParams.append('limit',limit);
-  url.searchParams.append('fuel',fuel);
+  const url = new URL(NEXT_RAPID_API_END_POINT);
+  if(manufacturer!= "")      
+    url.searchParams.append('make',`${manufacturer}`);
+  if(model!= "")
+    url.searchParams.append('model',`${model}`);  
+  if(fuel!= "")
+    url.searchParams.append('fuel_type',`${fuel}`);  
+  url.searchParams.append('limit',`${limit}`);
   url.searchParams.append('year',`${year}`);
   // Set the required headers for the API request
   const response = await fetch(
@@ -28,6 +31,7 @@ export async function fetchCars(filters: FilterProps) {
       headers: headers,
     }
   );
+  console.log(`${url}`);
   // Parse the response as JSON
   const result = await response.json();
   return result;
@@ -41,10 +45,8 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
   url.searchParams.append('zoomType', 'fullscreen');
   url.searchParams.append('modelYear', `${year}`);
   // url.searchParams.append('zoomLevel', zoomLevel);
-  url.searchParams.append('angle', `${angle}`);
-  console.log(url);
-  return `${url}`;
-  //return "/hero.png";
+  url.searchParams.append('angle', `${angle}`);  
+  return `${url}`;  
 }
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
