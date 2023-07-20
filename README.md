@@ -14,15 +14,11 @@ Alongside building this application, you'll also learn how to:
 - Create custom filter, combobox, and modal elements
 - Maintain a well-organized file and folder structure.
 - Embrace the principles of writing clean code.
-
-<div align="center">
-  <img src="@readme_assets/readme-car-rental.png" height="auto" width="100%"/>
-</div>
 <br />
+<img src="@readme_assets/readme-car-rental.png" height="100%" width="100%"/>
 
 <!-- Live Demo Application -->
-## Live Demo Application
-
+## Demo Application on Vercel
 <h4>
 <a href="https://next-carhub-app.vercel.app/">View it on Vercel</a>
 </h4>
