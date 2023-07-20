@@ -15,16 +15,26 @@ Alongside building this application, you'll also learn how to:
 - Maintain a well-organized file and folder structure.
 - Embrace the principles of writing clean code.
 
-<a href="https://next-carhub-app.vercel.app/">View Demo</a>
-
-<!-- About the Project -->
-## :star2: About the Project
-
 <div align="center">
   <img src="@readme_assets/readme-car-rental.png" height="auto" width="90%"/>
 </div>
 <br />
 
+<!-- Live Demo Application -->
+### Live Demo Application
+
+<h4>
+<a href="https://next-carhub-app.vercel.app/">View Demo</a>
+</h4>
+
+<!-- TechStack -->
+### Tech Stack
+
+![Skills](https://skillicons.dev/icons?i=nextjs,typescript,react,tailwindcss)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Getting Started -->
 ## Getting Started
 
 Clone the repository:
@@ -59,13 +69,13 @@ Run the development server:
 npm run dev
 ```
 
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+<!-- Learn More -->
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -75,6 +85,7 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+<!-- Deploye on Verce -->
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
@@ -82,7 +93,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 <!-- Acknowledgments -->
-## :gem: Acknowledgements
+## Acknowledgements
 
 This section used to mention useful resources and libraries that used in CreativAI Webapp:
 - [Next.js](https://nextjs.org/)
