@@ -1,16 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Build and Deploy a Modern Next.js 13 Application | React, Next JS 13, TypeScript, Tailwind CSS
+
+This application is developed using [this YouTube guide](https://www.youtube.com/watch?app=desktop&v=pUNSHPyVryU).
+
+It guides you how to build a state-of-the-art modern application that leverages all of the latest and greatest of what Next 13 has to offer, leveraging features such as server-side rendering and the app router. 
+
+Alongside building this application, you'll also learn how to:
+- Use Next.js 13 App Router and Server Side Rendering
+- Implement Advanced Search Functionality
+- Create Filtering Capabilities
+- Optimize Metadata and SEO
+- Create custom filter, combobox, and modal elements
+- Maintain a well-organized file and folder structure.
+- Embrace the principles of writing clean code.
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
+
+```bash
+git clone https://github.com/sujoy-saha/next-carhub-app.git
+cd next-carhub-app
+```
+
+Get all the dependencies:
+
+```bash
+npm install
+```
+
+Set-up configuration:
+
+Create a `.env.local` in the root directory and add the following configuration details.
+
+```bash
+NEXT_RAPID_API_KEY = "Replace with your Rapid API Key"
+NEXT_RAPID_API_HOST = "Replace with your Rapid API Host"
+NEXT_RAPID_API_END_POINT =  "Replace with your Rapid API Endpoint"
+
+NEXT_PUBLIC_IMAGIN_API_KEY = "Replace with your Imagin API Key"
+NEXT_PUBLIC_IMAGIN_END_POINT = "Replace with your Imagin Endpoint"
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
