@@ -1,8 +1,10 @@
+<a name="readme-top"></a>
+
 # Build and Deploy a Modern Next.js 13 Application | React, Next JS 13, TypeScript, Tailwind CSS
 
-This application is developed using [this YouTube guide](https://www.youtube.com/watch?app=desktop&v=pUNSHPyVryU).
+This application was developed using [this YouTube guide](https://www.youtube.com/watch?app=desktop&v=pUNSHPyVryU).
 
-It guides you how to build a state-of-the-art modern application that leverages all of the latest and greatest of what Next 13 has to offer, leveraging features such as server-side rendering and the app router. 
+The video guides you how to build a state-of-the-art modern application that leverages all of the latest and greatest of what Next 13 has to offer, leveraging features such as server-side rendering and the app router. 
 
 Alongside building this application, you'll also learn how to:
 - Use Next.js 13 App Router and Server Side Rendering
@@ -12,6 +14,16 @@ Alongside building this application, you'll also learn how to:
 - Create custom filter, combobox, and modal elements
 - Maintain a well-organized file and folder structure.
 - Embrace the principles of writing clean code.
+
+<a href="https://next-carhub-app.vercel.app/">View Demo</a>
+
+<!-- About the Project -->
+## :star2: About the Project
+
+<div align="center">
+  <img src="@readme_assets/readme-car-rental.png" height="auto" width="90%"/>
+</div>
+<br />
 
 ## Getting Started
 
@@ -68,3 +80,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+<!-- Acknowledgments -->
+## :gem: Acknowledgements
+
+This section used to mention useful resources and libraries that used in CreativAI Webapp:
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Headless UI](https://headlessui.com/)
+- [JS Mastery](https://www.jsmastery.pro/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
