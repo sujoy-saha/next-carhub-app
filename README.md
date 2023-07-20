@@ -18,10 +18,11 @@ Alongside building this application, you'll also learn how to:
 <img src="@readme_assets/readme-car-rental.png" height="100%" width="100%"/>
 
 <!-- Live Demo Application -->
-### Demo Application on Vercel
+## Demo Application on Vercel
 <h4>
 <a href="https://next-carhub-app.vercel.app/">View it on Vercel</a>
 </h4>
+
 
 <!-- TechStack -->
 ## Tech Stack
@@ -32,23 +33,20 @@ Alongside building this application, you'll also learn how to:
 <!-- Getting Started -->
 ## Getting Started
 
-#### Step 1:
-Clone the repository:
+#### Step 1: Clone the repository:
 
 ```bash
 git clone https://github.com/sujoy-saha/next-carhub-app.git
 cd next-carhub-app
 ```
 
-#### Step 2:
-Get all the dependencies:
+#### Step 2: Get all the dependencies:
 
 ```bash
 npm install
 ```
 
-#### Step 3:
-Set-up configuration:
+#### Step 3: Set-up configuration:
 
 Create a `.env.local` in the root directory and add the following configuration details.
 
@@ -61,14 +59,14 @@ NEXT_PUBLIC_IMAGIN_API_KEY = "Replace with your Imagin API Key"
 NEXT_PUBLIC_IMAGIN_END_POINT = "Replace with your Imagin Endpoint"
 ```
 
-#### Step 4:
-Run the development server:
+#### Step 4: Run the development server:
 
 ```bash
 npm run dev
 ```
 
-#### Step 5:
+#### Step 5: Browse the application:
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
