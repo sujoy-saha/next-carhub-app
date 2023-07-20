@@ -16,19 +16,19 @@ Alongside building this application, you'll also learn how to:
 - Embrace the principles of writing clean code.
 
 <div align="center">
-  <img src="@readme_assets/readme-car-rental.png" height="auto" width="90%"/>
+  <img src="@readme_assets/readme-car-rental.png" height="auto" width="100%"/>
 </div>
 <br />
 
 <!-- Live Demo Application -->
-### Live Demo Application
+## Live Demo Application
 
 <h4>
-<a href="https://next-carhub-app.vercel.app/">View Demo</a>
+<a href="https://next-carhub-app.vercel.app/">View it on Vercel</a>
 </h4>
 
 <!-- TechStack -->
-### Tech Stack
+## Tech Stack
 
 ![Skills](https://skillicons.dev/icons?i=nextjs,typescript,react,tailwindcss)
 
